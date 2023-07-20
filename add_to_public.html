@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    
+  <!-- Google Font: Source Sans Pro --
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons --
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote --
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/summernote/summernote-bs4.min.css">
+      <!-- DataTables -->
+      <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+      <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+      <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+      <!-- Theme style -->
+    <!-- Toastr -->
+  <link rel="stylesheet" href="https://logy.ai/cdn/dash/plugins/toastr/toastr.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
+    <div class="wrapper">
+    <div class="content-wrapper">
+    <script>
+        function test_ing() {
+            var number = document.getElementById("phone_number").value;
+            if (document.getElementById("phone_number").value.startsWith("0")) {
+                number = document.getElementById("phone_number").value.substring(1);
+            }
+            document.getElementById("ph_no").value = document.getElementById("country_code").value + number;
+        }
+    </script>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-info">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                Add User to the Kenya Public Bot
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="https://internal.logy.ai/sym/shift/" method="post"
+                                enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Phone Number</label>
+                                    <div class="row">
+                                        <select class="form-control col-3" onchange="test_ing()" id="country_code">
+                                            <option>+254</option>
+                                            <option>+91</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div hidden class="form-group">
+                                    <label for="exampleFormControlInput1">Phone Number</label>
+                                </div>
+                                <input oninput="test_ing()" id="phone_number" placeholder="Phone Number">
+                                <input hidden id="ph_no" placeholder="ph_no" name="ph_no" type="text" />
+                                <input hidden placeholder="ph_no_name" name="ph_no_name" type="text" value="NA" />
+                                <input hidden placeholder="qao_id" name="qao_id" type="number" value="795" />
+                                <input hidden placeholder="exec_id" name="exec_id" type="number" value="319" />
+                                <input type="submit">
+                            </form>
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+</body>
+
+</html>
